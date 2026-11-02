@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Madden Universe 2027</title>
+<style>
+body { margin:0; background:#090d18; color:white; font-family:Arial,sans-serif; }
+main { max-width:800px; margin:80px auto; padding:24px; }
+h1 { font-size:48px; margin-bottom:12px; }
+p { color:#aab4cc; }
+nav { display:grid; gap:16px; margin-top:36px; }
+a { padding:24px; background:#18223b; color:white; text-decoration:none; border-radius:12px; font-size:24px; }
+a:hover { background:#343f70; }
+</style>
+</head>
+<body>
+<main>
+<p>THE 2027 SEASON</p>
+<h1>Madden Universe</h1>
+<p>Nasir Cruz · Lachlan Knox · Ryan Miller</p>
+<nav>
+<a href="./Madden_Universe_2027_Week_1_With_Playable_Highlights_Netlify/">Week 1</a>
+<a href="./Madden_Universe_2027_Week_2_Netlify_FIXED/">Week 2</a>
+<a href="./Madden_Universe_2027_Week_3_Updated%20(1)/">Week 3</a>
+<a href="./Madden_Universe_2027_Week_4_Netlify/">Week 4</a>
+</nav>
+</main>
+</body>
+</html>
