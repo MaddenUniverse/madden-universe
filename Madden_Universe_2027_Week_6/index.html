@@ -456,6 +456,38 @@ body{background:radial-gradient(ellipse 60% 34% at 95% 0%,#15142b 0,transparent 
 .wk7-bottomnote{color:#97a7c1;font-size:.76rem;max-width:930px;margin-top:15px}
 @media(max-width:900px){.wk7-intro,.wk7-props,.wk7-newsbody{grid-template-columns:1fr}.wk7-newsbody figure{min-height:300px;max-height:430px}.wk7-newsbody img{min-height:300px}.wk7-picks{grid-template-columns:1fr}.wk7-news-copy{padding:26px}}
 @media(max-width:580px){.wk7-match{padding:18px}.wk7-matchup{gap:7px}.wk7-team{font-size:2.5rem}.wk7-mast{align-items:start}.wk7-line{align-items:flex-start}.wk7-line strong{white-space:normal}.wk7-intro h2{font-size:4.2rem}}
+
+/* Week 7 layout correction: show the entire supplied landscape photo. */
+.wk7-newsbody{display:flex;flex-direction:column;align-items:stretch}
+.wk7-newsbody figure{margin:0;width:100%;height:auto;min-height:0;background:#100d1b;position:relative;overflow:hidden}
+.wk7-newsbody figure img{display:block;width:100%;height:auto;max-height:630px;min-height:0;object-fit:contain;object-position:center center;margin:0 auto;background:#100d1b}
+.wk7-news-copy{max-width:1060px;width:100%;margin:0 auto;padding:30px 38px 34px;display:grid;grid-template-columns: minmax(260px,.78fr) 1fr;gap:0 36px;align-items:start}
+.wk7-news-copy .wk7-status{grid-column:1;justify-self:start;margin-bottom:8px}
+.wk7-news-copy h3{grid-column:1;grid-row:2 / span 5;font-size:clamp(3.3rem,6.2vw,6.1rem);margin:7px 0 0;line-height:.96}
+.wk7-news-copy p{grid-column:2;margin:0 0 14px}
+.wk7-news-copy .context{grid-column:2;margin-top:2px}
+/* Sportsbook inspired editorial market board. All prices remain model estimates. */
+.wk7-marketboard{border:1px solid #5a4b78;background:linear-gradient(125deg,#201b35,#141e2c);border-radius:12px;margin:20px 0;padding:18px 19px 17px}
+.wk7-markethead{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:13px}
+.wk7-markethead b{color:#e4d3ff;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase}
+.wk7-markethead span{font-size:.7rem;color:#b4c1d4;text-align:right}
+.wk7-marketcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.wk7-marketcol{border:1px solid #3f4b64;border-radius:8px;background:#121b29;padding:12px 13px}
+.wk7-marketcol .marketheading{display:block;color:#aebbd0;font-size:.68rem;font-weight:800;letter-spacing:.12em;margin-bottom:7px}
+.wk7-price{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:5px 0;color:#e7ebfa;font-size:.85rem}
+.wk7-price+ .wk7-price{border-top:1px solid #ffffff16}
+.wk7-price strong{font-size:.91rem;color:#e0d0ff;white-space:nowrap}
+.wk7-marketcontext{font-size:.78rem;color:#b4c1d4;line-height:1.65;margin:13px 0 0}
+.wk7-line span em{display:block;font-size:.68rem;font-style:normal;color:#95a7c0;margin-top:2px;line-height:1.4}
+.wk7-line strong{font-size:.84rem}
+.wk7-line strong small{display:block;font-size:.67rem;color:#aebbd0;font-weight:600}
+.wk7-bottomnote{line-height:1.7}
+.wk7-model-key{font-size:.76rem;line-height:1.7;color:#adbbd0;border-top:1px solid #ffffff1b;padding-top:11px;margin-top:16px}
+@media(max-width:850px){.wk7-news-copy{display:block;padding:24px 22px}.wk7-news-copy h3{font-size:clamp(3.4rem,9.5vw,5rem);margin:8px 0 18px}.wk7-marketcols{grid-template-columns:1fr 1fr}.wk7-marketcols .wk7-marketcol:last-child{grid-column:1/-1}}
+@media(max-width:560px){.wk7-marketcols{grid-template-columns:1fr}.wk7-marketcols .wk7-marketcol:last-child{grid-column:auto}.wk7-newsbody figure img{max-height:none}.wk7-markethead{align-items:flex-start;flex-direction:column}.wk7-markethead span{text-align:left}}
+
+/* Keep all matchup names fully visible at phone widths. */
+@media(max-width:560px){.wk7-matchup{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:6px}.wk7-team{font-size:clamp(1.6rem,7.1vw,2.25rem)}.wk7-side{min-width:0}}
 </style>
 </head>
 <body id="top"><header class="top"><div class="wrap topinner"><a class="brand" href="../index.html">MADDEN <b>UNIVERSE</b></a><nav aria-label="Week 6 navigation" class="links"><a href="#pregame">FIRST TAKE</a><a href="#scores">SCOREBOARD</a><a href="#ravens">RAVENS</a><a href="#titans">TITANS</a><a href="#packers">PACKERS</a><a href="#nightcap">NIGHTCAP</a><a href="#tracker">TRACKER</a><a href="#week7">WEEK 7 PREVIEW</a></nav></div></header>
@@ -469,117 +501,115 @@ body{background:radial-gradient(ellipse 60% 34% at 95% 0%,#15142b 0,transparent 
 <section class="section" id="nightcap"><div class="wrap"><div class="sectiontop"><span class="eyebrow">NIGHTCAP / SHANNON SHARPE AND CHAD JOHNSON / FICTIONAL EPISODE</span><h2>“GIBBS GOT THE<br/>WHOLE OFFENSE.”</h2><p class="lead">One week ago the jokes were about Ryan Miller barely needing to throw. After another win powered by Gibbs, the jokes have not stopped.</p></div><div class="debate"><div class="show-head"><span>NIGHTCAP</span><h3>UNC &amp; OCHO / THE HANDOFF DEBATE</h3></div><div class="conversation"><div class="talk"><span class="speaker">Shannon Sharpe <small>(laughing)</small></span><p>Ocho, I watched that game. Fifteen pass attempts for Ryan Miller. Fifteen! Meanwhile Gibbs went out there and scored three touchdowns on thirteen carries.</p></div><div class="talk"><span class="speaker">Chad Johnson <small>(grinning)</small></span><p>Unc, at this point I could play quarterback for Green Bay. You hand it to thirty nine, you let him work, and you pick up the W.</p></div><div class="talk"><span class="speaker">Shannon Sharpe <small>(raising eyebrow)</small></span><p>Hold on now. I did not say that young man cannot play. But eight completions, no touchdowns, and one interception? We got questions, Ocho.</p></div><div class="talk"><span class="speaker">Chad Johnson <small>(playful)</small></span><p>I got one question. How is Gibbs that good after missing three games? Man come back and start running like the game owe him money.</p></div><div class="talk"><span class="speaker">Shannon Sharpe <small>(serious)</small></span><p>And the other quarterback threw for four hundred twenty five yards. Green Bay has got to know whether Miller can win with his arm when Gibbs cannot get loose.</p></div><div class="talk"><span class="speaker">Chad Johnson <small>(agreeing)</small></span><p>That is the test. Winning matters, no doubt, but if the kid wants to be that guy, they eventually gotta let him be that guy.</p></div><div class="talk"><span class="speaker">Shannon Sharpe <small>(thoughtful)</small></span><p>And Nasir, I hope he gets healthy. You do not rush anybody back from a concussion to satisfy some fantasy stat sheet.</p></div><div class="talk"><span class="speaker">Chad Johnson <small>(nodding)</small></span><p>Exactly. Let him get right. Baltimore showed today it has enough people to make plays while he is out.</p></div></div></div></div></section>
 <section class="section" id="tracker"><div class="wrap"><div class="sectiontop"><span class="eyebrow">REGULAR SEASON ARCHIVE / UPDATED THROUGH WEEK 06</span><h2>THE MASTER<br/>RECORD.</h2><p class="lead">Every game in its place. Scroll the weekly table and track all three rookies without losing the earlier stats.</p></div><div class="master-shell"><div class="master-topline"><div><span class="eyebrow">LIVE ARCHIVE / VERIFIED GAME NUMBERS</span><h3>2027 Season Master Tracker</h3><p>Six completed games per player. Swipe sideways to view future weeks and the season total.</p></div><div class="week-status"><span>06</span><small>RECORDED</small></div></div><div class="scroll-rail"><span>SCROLL SEASON HISTORY</span><span class="scroll-line"><span></span></span><span>W1 TO W18 →</span></div><div aria-label="Scroll horizontally to see weekly stats" class="master-scroll" tabindex="0"><table class="master-table"><thead><tr><th class="pinned-player" scope="col">PLAYER / STAT</th><th scope="col">W1</th><th scope="col">W2</th><th scope="col">W3</th><th scope="col">W4</th><th scope="col">W5</th><th scope="col">W6</th><th scope="col">W7</th><th scope="col">W8</th><th scope="col">W9</th><th scope="col">W10</th><th scope="col">W11</th><th scope="col">W12</th><th scope="col">W13</th><th scope="col">W14</th><th scope="col">W15</th><th scope="col">W16</th><th scope="col">W17</th><th scope="col">W18</th><th class="total-column" scope="col">SEASON TOTAL</th></tr></thead><tbody><tr class="player-row cruz"><th class="pinned-player" scope="row"><div class="master-player"><b>Nasir “Nas” Cruz</b><small>BAL · WR #17</small><span>REC / YDS / REC TD</span></div></th><td class=""><b>18 / 135 / 4</b><small>5 rush, 44 yds, 1 TD</small></td><td class=""><b>3 / 30 / 0</b><small>simulated game</small></td><td class=""><b>12 / 148 / 2</b><small>three drops, loss</small></td><td class=""><b>5 / 62 / 1</b><small>Las Vegas, win</small></td><td class=""><b>16 / 316 / 3</b><small>Rookie yardage record</small></td><td class="live-week"><b>1 / 12 / 0</b><small>Concussion, ~5 snaps</small><small class="recorded">NEW THIS WEEK</small></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td class="total-column"><b>55 REC / 703 YDS / 10 REC TD</b><small>1 confirmed rush TD · 11 total TD</small></td></tr><tr class="player-row miller"><th class="pinned-player" scope="row"><div class="master-player"><b>Ryan Miller</b><small>GB · QB #11</small><span>CMP / ATT · YDS · TD / INT</span></div></th><td class=""><b>4 / 13 · 80</b><small>0 TD / 1 INT</small></td><td class=""><b>24 / 35 · 320</b><small>2 TD / 0 INT</small></td><td class=""><b>20 / 30 · 231</b><small>3 TD / 0 INT</small></td><td class=""><b>21 / 32 · 150</b><small>1 TD / 0 INT</small></td><td class=""><b>8 / 11 · 119</b><small>1 TD / 1 INT · Gibbs back</small></td><td class="live-week"><b>8 / 15 · 155</b><small>0 TD / 1 INT · Gibbs: 3 rush TD</small><small class="recorded">NEW THIS WEEK</small></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td class="total-column"><b>85 / 136 · 1,055 YDS</b><small>7 PASS TD · 3 INT · 6 WINS</small></td></tr><tr class="player-row knox"><th class="pinned-player" scope="row"><div class="master-player"><b>Lachlan “Lockie” Knox</b><small>TEN · CB #1</small><span>TOTAL TKL · PD · INT</span></div></th><td class=""><b>3 TKL</b><small>0 PD · 0 INT</small></td><td class=""><b>5 TKL</b><small>0 PD · 1 INT</small></td><td class=""><b>5 TKL</b><small>0 PD · 0 INT</small></td><td class=""><b>2 TKL</b><small>1 PD · 0 INT</small></td><td class=""><b>1 TKL</b><small>3 PD · 0 INT · Chase matchup</small></td><td class="live-week"><b>5 TKL</b><small>3 solo · 2 assisted · 0 PD · 0 INT</small><small class="recorded">NEW THIS WEEK</small></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td><span class="awaiting">·</span></td><td class="total-column"><b>21 TKL · 4 PD</b><small>1 INT · 6 GAMES</small></td></tr></tbody></table></div><p class="master-caption">Week 6 box scores are supplied Madden 27 franchise results. Weeks 1 through 5 retain the established archive. Future games remain blank until played.</p></div>
 <div class="minihead"><span>WHAT WE KNOW AFTER SIX</span><h3>THE STATE OF THE UNIVERSE</h3></div><div class="standings"><article><h4>BALTIMORE / NASIR CRUZ</h4><strong>55 / 703</strong><p>Receptions and receiving yards through six tracked games, with 10 receiving touchdowns. Week 6 ended early with a concussion after approximately five snaps.</p></article><article><h4>TENNESSEE / LOCKIE KNOX</h4><strong>21 / 4</strong><p>Combined tackles and passes defended through six games, plus one interception. Tennessee has held consecutive opponents scoreless.</p></article><article><h4>GREEN BAY / RYAN MILLER</h4><strong>7 / 3</strong><p>Passing touchdowns and interceptions through six games. 1,055 passing yards and six tracked wins, with more questions about the offense built around Gibbs.</p></article></div></div></section>
-
 <section class="section wk7" id="week7">
-  <div class="wrap">
-    <div class="wk7-dateline">Thursday morning / Week 7 countdown</div>
-    <div class="wk7-intro">
-      <div>
-        <h2>HALLOWEEN<br><span>GETS SPOOKY.</span></h2>
-        <p class="lead">Two heavyweight conference clashes. A showdown in Indianapolis. Three games that could change the tone of this young season before the weekend even arrives. The scores are still blank. The pressure is already real.</p>
-      </div>
-      <aside class="wk7-editor-note"><b>THE THURSDAY BOARD</b><p>All matchups are previewed as unplayed. The spreads, totals and player props below are fictional Madden Universe editorial projections, not actual sportsbook odds. Records reflect the requested pregame snapshot.</p></aside>
-    </div>
-
-    <article class="wk7-match" aria-labelledby="wk7-lions-bears">
-      <div class="wk7-mast"><span>Game to watch 01 / NFC North</span><small>Chicago / Halloween week spotlight</small></div>
-      <div class="wk7-matchup" id="wk7-lions-bears">
-        <div class="wk7-side"><div class="wk7-team">DETROIT</div><div class="wk7-teamname">Lions / on the road</div><div class="wk7-record">5–1</div></div>
-        <div class="wk7-at">AT</div>
-        <div class="wk7-side"><div class="wk7-team">CHICAGO</div><div class="wk7-teamname">Bears / at home</div><div class="wk7-record">4–2</div></div>
-      </div>
-      <p class="wk7-summary">The most dangerous thing in Chicago is Lamar Jackson with room to escape. The Bears have a 99 OVR quarterback, DeVonta Smith at 95, and Trent McDuffie at 99 locking down the secondary. Detroit counters with 98 OVR Maxx Crosby and a powerful offensive line featuring Quenton Nelson and Jordan Mailata. If Crosby wrecks the pocket, Chicago's passing rhythm can disappear fast. If Lamar escapes the edge, the Lions have an entirely different problem.</p>
-      <div class="wk7-props">
-        <div class="wk7-lines"><h4 class="wk7-subtitle">Projected lines / Props</h4>
-          <div class="wk7-split"><span class="wk7-chip">Bears favored by 2.5</span><span class="wk7-chip">Game total 50.5</span></div>
-          <div class="wk7-line"><span>Lamar Jackson passing yards</span><strong>Over / Under 259.5</strong></div>
-          <div class="wk7-line"><span>Lamar Jackson rushing yards</span><strong>Over / Under 55.5</strong></div>
-          <div class="wk7-line"><span>DeVonta Smith receiving yards</span><strong>Over / Under 76.5</strong></div>
-          <div class="wk7-line"><span>Maxx Crosby sacks</span><strong>Over / Under 0.5</strong></div>
-          <div class="wk7-line"><span>Detroit J. Williams rushing yards</span><strong>Over / Under 68.5</strong></div>
-        </div>
-        <div class="wk7-matchup-story"><h4 class="wk7-subtitle">The matchup everyone wants</h4><p><strong>Crosby against Jackson.</strong> The Lions can pressure with an elite edge rusher. Chicago can punish overaggressive rush lanes with Lamar's legs. Trent McDuffie gives the Bears a chance to erase a side of the field, but Detroit's offensive line is built to survive tough fronts.</p><p>The Bears' 4–2 record does not make them an easy pick against a 5–1 Detroit team. The matchup can swing on sacks, scramble conversions, and whether either team controls the second half.</p>
-          <div class="wk7-pick"><b>FIRST TAKE EARLY PICKS</b><p><strong>Marcus Spears:</strong> Chicago 30, Detroit 27. Lamar's legs make the difference.<br><strong>Dan Orlovsky:</strong> Detroit 27, Chicago 24. Crosby disrupts just enough possessions.</p></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="wk7-match" aria-labelledby="wk7-bengals-steelers">
-      <div class="wk7-mast"><span>Game to watch 02 / AFC North</span><small>Pittsburgh / division pressure</small></div>
-      <div class="wk7-matchup" id="wk7-bengals-steelers">
-        <div class="wk7-side"><div class="wk7-team">CINCINNATI</div><div class="wk7-teamname">Bengals / on the road</div><div class="wk7-record">4–1</div></div>
-        <div class="wk7-at">AT</div>
-        <div class="wk7-side"><div class="wk7-team">PITTSBURGH</div><div class="wk7-teamname">Steelers / at home</div><div class="wk7-record">4–2</div></div>
-      </div>
-      <p class="wk7-summary">Cincinnati can send CeeDee Lamb (97 OVR), Tee Higgins (94), DK Metcalf (93) and Travis Kelce (94) into the same passing attack. That is a matchup nightmare, until you remember Pittsburgh has 98 OVR Pat Surtain II on the other side. Bo Nix has Tetairoa McMillan and Omarion Hampton to lean on. Somebody's skill position stars are going to be frustrated.</p>
-      <div class="wk7-props">
-        <div class="wk7-lines"><h4 class="wk7-subtitle">Projected lines / Props</h4>
-          <div class="wk7-split"><span class="wk7-chip">Bengals favored by 1.5</span><span class="wk7-chip">Game total 51.5</span></div>
-          <div class="wk7-line"><span>T. Ewing passing yards (CIN)</span><strong>Over / Under 273.5</strong></div>
-          <div class="wk7-line"><span>CeeDee Lamb receiving yards</span><strong>Over / Under 78.5</strong></div>
-          <div class="wk7-line"><span>Tetairoa McMillan receiving yards</span><strong>Over / Under 73.5</strong></div>
-          <div class="wk7-line"><span>Omarion Hampton rushing yards</span><strong>Over / Under 75.5</strong></div>
-          <div class="wk7-line"><span>Bo Nix passing yards</span><strong>Over / Under 229.5</strong></div>
-        </div>
-        <div class="wk7-matchup-story"><h4 class="wk7-subtitle">Talent everywhere. No safe throw.</h4><p><strong>Surtain versus Cincinnati's receivers</strong> is the headline, but nobody has confirmed he'll shadow Lamb on every snap. Cincinnati also fields Denzel Ward and Travis Hunter in the secondary, making the matchup a challenge for Nix and McMillan.</p><p>Pittsburgh is good enough to win with its defense and Hampton's physical running. Cincinnati has the deeper headline receiving group. The difference may be which offense can stay patient when the first read is gone.</p>
-          <div class="wk7-pick"><b>FIRST TAKE EARLY PICKS</b><p><strong>Ryan Clark:</strong> Pittsburgh 27, Cincinnati 24. Home field and Surtain in a close one.<br><strong>Stephen A. Smith:</strong> Cincinnati 31, Pittsburgh 28. Too many Bengals targets to bottle up for four quarters.</p></div>
-        </div>
-      </div>
-    </article>
-
-    <div class="wk7-news" role="group" aria-labelledby="nasir-practice-title">
-      <div class="wk7-newslabel"><span>Breaking / Wednesday practice report</span><span>Baltimore Ravens / WR #17</span></div>
-      <div class="wk7-newsbody">
-        <figure><img src="assets/nasir_wednesday_practice.jpg" alt="Nasir Cruz leaning forward in his purple Ravens number 17 practice jersey at Wednesday training" loading="lazy"><figcaption>Wednesday training / Nasir Cruz back on the practice field</figcaption></figure>
-        <div class="wk7-news-copy"><span class="wk7-status">Status: Questionable</span><h3 id="nasir-practice-title">NASIR IS<br><span>BACK AT PRACTICE.</span></h3><p>After suffering a concussion against Seattle in Week 6, Nasir Cruz appeared at Wednesday's Ravens practice. It is the first encouraging development ahead of a major Week 7 matchup in Indianapolis.</p><p>But the rookie remains <strong>questionable</strong>. Being on the practice field does not by itself confirm that he has completed concussion protocol or received clearance for game contact. Baltimore has not made a final game status decision in this story.</p><p>He had 316 receiving yards in Week 5, then only one catch for 12 yards before leaving Week 6 after roughly five snaps. Whether he plays, and what workload he could handle if cleared, are still open questions.</p><div class="context">THURSDAY MORNING WATCH: Practice participation is an encouraging sign, not a guarantee of availability. A final determination may come close to game time.</div></div>
-      </div>
-    </div>
-
-    <article class="wk7-match wk7-feature" aria-labelledby="wk7-ravens-colts">
-      <div class="wk7-mast"><span>Game to watch 03 / Main event</span><small>Indianapolis / a potential AFC statement</small></div>
-      <div class="wk7-matchup" id="wk7-ravens-colts">
-        <div class="wk7-side"><div class="wk7-team">BALTIMORE</div><div class="wk7-teamname">Ravens / on the road</div><div class="wk7-record">5–1</div></div>
-        <div class="wk7-at">AT</div>
-        <div class="wk7-side"><div class="wk7-team">INDIANAPOLIS</div><div class="wk7-teamname">Colts / at home</div><div class="wk7-record">5–1</div></div>
-      </div>
-      <p class="wk7-summary">Caleb Williams and Baltimore's explosive offense meet a 5–1 Indianapolis team led by Jonathan Taylor. Caleb's 20 passing touchdowns make him the engine, but the Colts' front features Brian Burns while Jonathan Taylor runs behind Creed Humphrey and Tyler Smith. The Ravens have Derrick Henry, Mark Andrews and Alec Pierce even if Nasir Cruz cannot go. A six win start is on the line for both clubs.</p>
-      <div class="wk7-props">
-        <div class="wk7-lines"><h4 class="wk7-subtitle">Projected lines / Props</h4>
-          <div class="wk7-split"><span class="wk7-chip">Ravens favored by 1.5</span><span class="wk7-chip">Game total 49.5</span></div>
-          <div class="wk7-line"><span>Caleb Williams passing yards</span><strong>Over / Under 258.5</strong></div>
-          <div class="wk7-line"><span>Jonathan Taylor rushing yards</span><strong>Over / Under 86.5</strong></div>
-          <div class="wk7-line"><span>Derrick Henry rushing yards</span><strong>Over / Under 77.5</strong></div>
-          <div class="wk7-line"><span>Mark Andrews receiving yards</span><strong>Over / Under 55.5</strong></div>
-          <div class="wk7-line"><span>Nasir Cruz receiving yards</span><strong>Over / Under 74.5*</strong></div>
-          <div class="wk7-line"><span>Brian Burns sacks</span><strong>Over / Under 0.5</strong></div>
-        </div>
-        <div class="wk7-matchup-story"><h4 class="wk7-subtitle">The Cruz question changes the board</h4><p><strong>If cleared:</strong> Cruz forces the Colts to account for a receiver with 55 catches, 703 yards and 10 receiving touchdowns through six games. Baltimore can stretch the secondary with Cruz and Pierce, giving Caleb more room to throw.</p><p><strong>If ruled out:</strong> Baltimore is still dangerous. Alec Pierce had 106 receiving yards against Seattle, M. Carroll caught two touchdowns, and Henry and Andrews provide established options. But Indianapolis is a much tougher test than Seattle's Week 6 defense.</p><p><strong>Scenario adjustment:</strong> Our fictional projection moves from Baltimore favored by 3.5 with Cruz fully cleared to a near even matchup if he sits. These are analyst estimates, not posted betting prices.</p>
-          <div class="wk7-pick"><b>THE DECIDING FACTOR</b><p>Can Baltimore's rushing defense slow Jonathan Taylor, and can Caleb Williams stay efficient when Brian Burns gets pressure? Nasir's availability matters, but neither game plan can depend solely on a single player.</p></div>
-        </div>
-      </div>
-      <p class="wk7-bottomnote">*Cruz receiving yards prop is conditional on active status and medical clearance. If inactive, the prop is off the board. Every listed line is a fictional editorial projection.</p>
-    </article>
-
-    <div class="wk7-debate" aria-labelledby="wk7-debate-title">
-      <div class="show-head"><span>ESPN FIRST TAKE / Thursday morning / fictional panel</span><h3 id="wk7-debate-title">DOES BALTIMORE NEED NASIR TO BEAT INDY?</h3></div>
-      <div class="talk"><span class="speaker">Shae Cornette <small>(setting the table)</small></span><p>Nasir Cruz practiced Wednesday, but he remains questionable after last week's concussion. Baltimore and Indianapolis are both 5–1. Stephen A., are the Ravens still your pick if the rookie can't play?</p></div>
-      <div class="talk"><span class="speaker">Stephen A. Smith <small>(animated)</small></span><p>That is a different football team when Nasir Cruz is on the field! Fifty five receptions, seven hundred three yards, ten touchdowns! But listen to me carefully: practicing does not mean he's cleared. If the medical staff says he can't play, he doesn't play. And if he's OUT, I am leaning Indianapolis. If he's fully cleared and ready, I'm taking Baltimore.</p></div>
-      <div class="talk"><span class="speaker">Dan Orlovsky <small>(disagreeing)</small></span><p>I'm taking the Ravens either way. They just won 35 to 7 without Nasir for almost the entire game. Caleb threw three touchdowns. Alec Pierce had over a hundred yards. It's a complete offense. Nasir makes the ceiling higher, but Baltimore is not helpless if he sits.</p></div>
-      <div class="talk"><span class="speaker">Ryan Clark <small>(measured)</small></span><p>Seattle ain't Indianapolis. Jonathan Taylor is a problem, Brian Burns can change a passing down, and that Colts offense scores over 30 a game. Even if Nasir plays, we have no idea whether Baltimore would give him a normal workload. I'm taking Indianapolis in a close one.</p></div>
-      <div class="talk"><span class="speaker">Marcus Spears <small>(confident)</small></span><p>Y'all forgot about Derrick Henry? Mark Andrews? That Baltimore line? I don't need a 300 yard game from Cruz to see how the Ravens can win. Give me Caleb protecting the ball, Henry working late, and that defense getting one big stop. I'm on Baltimore.</p></div>
-      <div class="talk"><span class="speaker">Shae Cornette <small>(closing)</small></span><p>So the panel is split, and Nasir's final status could change the predictions. For now, the only confirmed story is that he practiced Wednesday and remains questionable.</p></div>
-      <div class="wk7-picks" aria-label="Analyst predicted scores">
-        <article><small>STEPHEN A. SMITH / CONDITIONAL</small><strong>BAL 31, IND 27</strong><p>If Cruz is cleared and fully available. If he sits: Indianapolis 27, Baltimore 24.</p></article>
-        <article><small>DAN ORLOVSKY / RAVENS</small><strong>BAL 28, IND 24</strong><p>Picks Baltimore even without Nasir because Caleb has other productive weapons.</p></article>
-        <article><small>RYAN CLARK / COLTS</small><strong>IND 27, BAL 23</strong><p>Taylor, the Indianapolis offensive line and Burns make this a tough matchup regardless of Cruz.</p></article>
-        <article><small>MARCUS SPEARS / RAVENS</small><strong>BAL 27, IND 23</strong><p>Henry, Andrews and the defense carry enough weight whether or not Cruz is active.</p></article>
-        <article><small>EDITORIAL CONSENSUS / NO OFFICIAL PICK</small><strong>TOO CLOSE</strong><p>No confirmed medical clearance, no fixed snap count and no actual betting market are represented here.</p></article>
-      </div>
-    </div>
-    <p class="wk7-bottomnote">This is a fictional Thursday morning broadcast preview set inside the Madden Universe franchise. Matchup records, rosters, OVR ratings and the Wednesday Nasir practice update come from creator supplied screenshots and story details. No Week 7 results are depicted as played.</p>
-  </div>
+<div class="wrap">
+<div class="wk7-dateline">Thursday morning / Week 7 countdown</div>
+<div class="wk7-intro">
+<div>
+<h2>HALLOWEEN<br/><span>GETS SPOOKY.</span></h2>
+<p class="lead">Two heavyweight conference clashes. A showdown in Indianapolis. Three games that could change the tone of this young season before the weekend even arrives. The scores are still blank. The pressure is already real.</p>
+</div>
+<aside class="wk7-editor-note"><b>THE THURSDAY BOARD</b><p>Three unplayed franchise matchups, priced as a Thursday morning preview. These are simulated editorial markets, not real sportsbook listings. Player yardage baselines use the Madden season averages visible in the supplied screenshots; matchup and injury adjustments are estimates. Standard -110 spread and total pricing is illustrative.</p></aside>
+</div>
+<article aria-labelledby="wk7-lions-bears" class="wk7-match">
+<div class="wk7-mast"><span>Game to watch 01 / NFC North</span><small>Chicago / Halloween week spotlight</small></div>
+<div class="wk7-matchup" id="wk7-lions-bears">
+<div class="wk7-side"><div class="wk7-team">DETROIT</div><div class="wk7-teamname">Lions / on the road</div><div class="wk7-record">5–1</div></div>
+<div class="wk7-at">AT</div>
+<div class="wk7-side"><div class="wk7-team">CHICAGO</div><div class="wk7-teamname">Bears / at home</div><div class="wk7-record">4–2</div></div>
+</div>
+<p class="wk7-summary">The most dangerous thing in Chicago is Lamar Jackson with room to escape. The Bears have a 99 OVR quarterback, DeVonta Smith at 95, and Trent McDuffie at 99 locking down the secondary. Detroit counters with 98 OVR Maxx Crosby and a powerful offensive line featuring Quenton Nelson and Jordan Mailata. If Crosby wrecks the pocket, Chicago's passing rhythm can disappear fast. If Lamar escapes the edge, the Lions have an entirely different problem.</p><div aria-label="Fictional pregame spread total and moneyline" class="wk7-marketboard">
+<div class="wk7-markethead"><b>THURSDAY MODEL BOARD</b><span>Illustrative American prices only / not an active sportsbook</span></div>
+<div class="wk7-marketcols">
+<div class="wk7-marketcol"><span class="marketheading">POINT SPREAD</span><div class="wk7-price"><span>DET</span><strong>+1.5 (-110)</strong></div><div class="wk7-price"><span>CHI</span><strong>-1.5 (-110)</strong></div></div>
+<div class="wk7-marketcol"><span class="marketheading">GAME TOTAL</span><div class="wk7-price"><span>Over</span><strong>52.5 (-110)</strong></div><div class="wk7-price"><span>Under</span><strong>52.5 (-110)</strong></div></div>
+<div class="wk7-marketcol"><span class="marketheading">MONEYLINE</span><div class="wk7-price"><span>DET</span><strong>+102</strong></div><div class="wk7-price"><span>CHI</span><strong>-122</strong></div></div>
+</div>
+<p class="wk7-marketcontext">Chicago gets a modest home edge because of Lamar Jackson, DeVonta Smith and Trent McDuffie, despite Detroit’s better record. Lamar averages 271.1 passing yards, while Arthur King averages 258.6; the total reflects both offenses and interception risk.</p>
+</div>
+<div class="wk7-props">
+<div class="wk7-lines"><h4 class="wk7-subtitle">PLAYER PROPS / SEASON BASELINES</h4>
+<div class="wk7-line"><span>Lamar Jackson passing yards<em>271.1 per game (1,898 in 7)</em></span><strong>O/U 264.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>Arthur King passing yards<em>258.6 per game (1,810 in 7)</em></span><strong>O/U 247.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>DeVonta Smith receiving yards<em>110.7 per game (775 in 7)</em></span><strong>O/U 101.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>Lamar Jackson rushing yards<em>No rushing season average supplied</em></span><strong>O/U 55.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>Maxx Crosby sacks<em>Matchup projection; season sack average unavailable</em></span><strong>O/U 0.5<small>-125 over / +105 under</small></strong></div><div class="wk7-line"><span>Detroit J. Williams rushing yards<em>Role estimate; season rushing average unavailable</em></span><strong>O/U 65.5<small>-110 each side</small></strong></div><p class="wk7-model-key">Season baseline is a descriptive per-game average, not a promise of future volume. The projected number adjusts for opponent, game script, role or availability. Lines with unavailable baselines are explicitly labeled as estimates.</p></div>
+<div class="wk7-matchup-story"><h4 class="wk7-subtitle">The matchup everyone wants</h4><p><strong>Crosby against Jackson.</strong> The Lions can pressure with an elite edge rusher. Chicago can punish overaggressive rush lanes with Lamar's legs. Trent McDuffie gives the Bears a chance to erase a side of the field, but Detroit's offensive line is built to survive tough fronts.</p><p>The Bears' 4–2 record does not make them an easy pick against a 5–1 Detroit team. The matchup can swing on sacks, scramble conversions, and whether either team controls the second half.</p>
+<div class="wk7-pick"><b>FIRST TAKE EARLY PICKS</b><p><strong>Marcus Spears:</strong> Chicago 30, Detroit 27. Lamar's legs make the difference.<br/><strong>Dan Orlovsky:</strong> Detroit 27, Chicago 24. Crosby disrupts just enough possessions.</p></div>
+</div>
+</div>
+</article>
+<article aria-labelledby="wk7-bengals-steelers" class="wk7-match">
+<div class="wk7-mast"><span>Game to watch 02 / AFC North</span><small>Pittsburgh / division pressure</small></div>
+<div class="wk7-matchup" id="wk7-bengals-steelers">
+<div class="wk7-side"><div class="wk7-team">CINCINNATI</div><div class="wk7-teamname">Bengals / on the road</div><div class="wk7-record">4–1</div></div>
+<div class="wk7-at">AT</div>
+<div class="wk7-side"><div class="wk7-team">PITTSBURGH</div><div class="wk7-teamname">Steelers / at home</div><div class="wk7-record">4–2</div></div>
+</div>
+<p class="wk7-summary">Cincinnati can send CeeDee Lamb (97 OVR), Tee Higgins (94), DK Metcalf (93) and Travis Kelce (94) into the same passing attack. That is a matchup nightmare, until you remember Pittsburgh has 98 OVR Pat Surtain II on the other side. Bo Nix has Tetairoa McMillan and Omarion Hampton to lean on. Somebody's skill position stars are going to be frustrated.</p><div aria-label="Fictional pregame spread total and moneyline" class="wk7-marketboard">
+<div class="wk7-markethead"><b>THURSDAY MODEL BOARD</b><span>Illustrative American prices only / not an active sportsbook</span></div>
+<div class="wk7-marketcols">
+<div class="wk7-marketcol"><span class="marketheading">POINT SPREAD</span><div class="wk7-price"><span>CIN</span><strong>-1.5 (-110)</strong></div><div class="wk7-price"><span>PIT</span><strong>+1.5 (-110)</strong></div></div>
+<div class="wk7-marketcol"><span class="marketheading">GAME TOTAL</span><div class="wk7-price"><span>Over</span><strong>50.5 (-110)</strong></div><div class="wk7-price"><span>Under</span><strong>50.5 (-110)</strong></div></div>
+<div class="wk7-marketcol"><span class="marketheading">MONEYLINE</span><div class="wk7-price"><span>CIN</span><strong>-122</strong></div><div class="wk7-price"><span>PIT</span><strong>+102</strong></div></div>
+</div>
+<p class="wk7-marketcontext">Cincinnati gets a small edge for its elite receiving depth, with Pittsburgh home field and Pat Surtain keeping the spread tight. T. Ewing averages 265.8 passing yards and Bo Nix 255.7; both have eight interceptions, which limits the total.</p>
+</div>
+<div class="wk7-props">
+<div class="wk7-lines"><h4 class="wk7-subtitle">PLAYER PROPS / SEASON BASELINES</h4>
+<div class="wk7-line"><span>T. Ewing passing yards<em>265.8 per game (1,595 in 6)</em></span><strong>O/U 254.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>Bo Nix passing yards<em>255.7 per game (1,790 in 7)</em></span><strong>O/U 247.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>DK Metcalf receiving yards<em>98.5 per game (591 in 6)</em></span><strong>O/U 87.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>Tetairoa McMillan receiving yards<em>67.0 per game (469 in 7)</em></span><strong>O/U 62.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>CeeDee Lamb receiving yards<em>Role projection; season average not supplied</em></span><strong>O/U 79.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>Omarion Hampton rushing yards<em>Role projection; season average not supplied</em></span><strong>O/U 72.5<small>-110 each side</small></strong></div><p class="wk7-model-key">Season baseline is a descriptive per-game average, not a promise of future volume. The projected number adjusts for opponent, game script, role or availability. Lines with unavailable baselines are explicitly labeled as estimates.</p></div>
+<div class="wk7-matchup-story"><h4 class="wk7-subtitle">Talent everywhere. No safe throw.</h4><p><strong>Surtain versus Cincinnati's receivers</strong> is the headline, but nobody has confirmed he'll shadow Lamb on every snap. Cincinnati also fields Denzel Ward and Travis Hunter in the secondary, making the matchup a challenge for Nix and McMillan.</p><p>Pittsburgh is good enough to win with its defense and Hampton's physical running. Cincinnati has the deeper headline receiving group. The difference may be which offense can stay patient when the first read is gone.</p>
+<div class="wk7-pick"><b>FIRST TAKE EARLY PICKS</b><p><strong>Ryan Clark:</strong> Pittsburgh 27, Cincinnati 24. Home field and Surtain in a close one.<br/><strong>Stephen A. Smith:</strong> Cincinnati 31, Pittsburgh 28. Too many Bengals targets to bottle up for four quarters.</p></div>
+</div>
+</div>
+</article>
+<div aria-labelledby="nasir-practice-title" class="wk7-news" role="group">
+<div class="wk7-newslabel"><span>Breaking / Wednesday practice report</span><span>Baltimore Ravens / WR #17</span></div>
+<div class="wk7-newsbody">
+<figure><img alt="Nasir Cruz leaning forward in his purple Ravens number 17 practice jersey at Wednesday training" loading="lazy" src="assets/nasir_wednesday_practice.jpg"/><figcaption>Wednesday training / Nasir Cruz back on the practice field</figcaption></figure>
+<div class="wk7-news-copy"><span class="wk7-status">Status: Questionable</span><h3 id="nasir-practice-title">NASIR IS<br/><span>BACK AT PRACTICE.</span></h3><p>After suffering a concussion against Seattle in Week 6, Nasir Cruz appeared at Wednesday's Ravens practice. It is the first encouraging development ahead of a major Week 7 matchup in Indianapolis.</p><p>But the rookie remains <strong>questionable</strong>. Being on the practice field does not by itself confirm that he has completed concussion protocol or received clearance for game contact. Baltimore has not made a final game status decision in this story.</p><p>He had 316 receiving yards in Week 5, then only one catch for 12 yards before leaving Week 6 after roughly five snaps. Whether he plays, and what workload he could handle if cleared, are still open questions.</p><div class="context">THURSDAY MORNING WATCH: Practice participation is an encouraging sign, not a guarantee of availability. A final determination may come close to game time.</div></div>
+</div>
+</div>
+<article aria-labelledby="wk7-ravens-colts" class="wk7-match wk7-feature">
+<div class="wk7-mast"><span>Game to watch 03 / Main event</span><small>Indianapolis / a potential AFC statement</small></div>
+<div class="wk7-matchup" id="wk7-ravens-colts">
+<div class="wk7-side"><div class="wk7-team">BALTIMORE</div><div class="wk7-teamname">Ravens / on the road</div><div class="wk7-record">5–1</div></div>
+<div class="wk7-at">AT</div>
+<div class="wk7-side"><div class="wk7-team">INDIANAPOLIS</div><div class="wk7-teamname">Colts / at home</div><div class="wk7-record">5–1</div></div>
+</div>
+<p class="wk7-summary">Caleb Williams and Baltimore's explosive offense meet a 5–1 Indianapolis team led by Jonathan Taylor. Caleb's 20 passing touchdowns make him the engine, but the Colts' front features Brian Burns while Jonathan Taylor runs behind Creed Humphrey and Tyler Smith. The Ravens have Derrick Henry, Mark Andrews and Alec Pierce even if Nasir Cruz cannot go. A six win start is on the line for both clubs.</p><div aria-label="Fictional pregame spread total and moneyline" class="wk7-marketboard">
+<div class="wk7-markethead"><b>THURSDAY MODEL BOARD</b><span>Illustrative American prices only / not an active sportsbook</span></div>
+<div class="wk7-marketcols">
+<div class="wk7-marketcol"><span class="marketheading">POINT SPREAD</span><div class="wk7-price"><span>BAL</span><strong>+1.5 (-110)</strong></div><div class="wk7-price"><span>IND</span><strong>-1.5 (-110)</strong></div></div>
+<div class="wk7-marketcol"><span class="marketheading">GAME TOTAL</span><div class="wk7-price"><span>Over</span><strong>55.5 (-110)</strong></div><div class="wk7-price"><span>Under</span><strong>55.5 (-110)</strong></div></div>
+<div class="wk7-marketcol"><span class="marketheading">MONEYLINE</span><div class="wk7-price"><span>BAL</span><strong>+100</strong></div><div class="wk7-price"><span>IND</span><strong>-120</strong></div></div>
+</div>
+<p class="wk7-marketcontext">Using the team averages on the Madden matchup screen: Baltimore scores 36.8 and allows 25.1 per game; Indianapolis scores 30.1 and allows 21.8. Blending each offense with the opposing defense produces roughly 29.3 BAL and 27.6 IND, or 56.9 combined, before home field and Cruz uncertainty. The preview price favors the home Colts by 1.5.</p>
+</div>
+<div class="wk7-props">
+<div class="wk7-lines"><h4 class="wk7-subtitle">PLAYER PROPS / SEASON BASELINES</h4>
+<div class="wk7-line"><span>Caleb Williams passing yards<em>285.2 per game (1,711 in 6); IND allows 217.8 pass YPG</em></span><strong>O/U 252.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>Jonathan Taylor rushing yards<em>67.7 per game (406 in 6); BAL allows 69.0 rush YPG</em></span><strong>O/U 65.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>Alec Pierce receiving yards<em>84.5 per game (507 in 6)</em></span><strong>O/U 81.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>Derrick Henry rushing yards<em>Role projection; individual season average not supplied</em></span><strong>O/U 69.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>Mark Andrews receiving yards<em>Role projection; season average not supplied</em></span><strong>O/U 53.5<small>-110 each side</small></strong></div><div class="wk7-line"><span>Nasir Cruz receiving yards<em>117.2 per game (703 in 6), distorted by Week 6 injury</em></span><strong>OFF BOARD<small>Illustrative 85.5 if fully cleared</small></strong></div><div class="wk7-line"><span>Brian Burns sacks<em>Matchup projection; season sack average unavailable</em></span><strong>O/U 0.5<small>-110 each side</small></strong></div><p class="wk7-model-key">Season baseline is a descriptive per-game average, not a promise of future volume. The projected number adjusts for opponent, game script, role or availability. Lines with unavailable baselines are explicitly labeled as estimates.</p></div>
+<div class="wk7-matchup-story"><h4 class="wk7-subtitle">The Cruz question changes the board</h4><p><strong>If cleared:</strong> Cruz forces the Colts to account for a receiver with 55 catches, 703 yards and 10 receiving touchdowns through six games. Baltimore can stretch the secondary with Cruz and Pierce, giving Caleb more room to throw.</p><p><strong>If ruled out:</strong> Baltimore is still dangerous. Alec Pierce had 106 receiving yards against Seattle, M. Carroll caught two touchdowns, and Henry and Andrews provide established options. But Indianapolis is a much tougher test than Seattle's Week 6 defense.</p><p><strong>Availability sensitivity:</strong> The Thursday baseline is Indianapolis favored by 1.5 while Cruz is questionable. Our model would lean Baltimore favored by 1.5 if he is fully cleared for his usual workload, or Indianapolis favored by 3.5 if he is ruled out. Those are conditional estimates, not offers from a sportsbook.</p>
+<div class="wk7-pick"><b>THE DECIDING FACTOR</b><p>Can Baltimore's rushing defense slow Jonathan Taylor, and can Caleb Williams stay efficient when Brian Burns gets pressure? Nasir's availability matters, but neither game plan can depend solely on a single player.</p></div>
+</div>
+</div>
+<p class="wk7-bottomnote">*Nasir Cruz has no listed game prop while he is questionable following a concussion. The hypothetical 85.5-yard figure applies only if fully cleared with a normal workload. All moneyline, spread, total and player prices are fictional estimates. The underlying game results are not known in this preview.</p>
+</article>
+<div aria-labelledby="wk7-debate-title" class="wk7-debate">
+<div class="show-head"><span>ESPN FIRST TAKE / Thursday morning / fictional panel</span><h3 id="wk7-debate-title">DOES BALTIMORE NEED NASIR TO BEAT INDY?</h3></div>
+<div class="talk"><span class="speaker">Shae Cornette <small>(setting the table)</small></span><p>Nasir Cruz practiced Wednesday, but he remains questionable after last week's concussion. Baltimore and Indianapolis are both 5–1. Stephen A., are the Ravens still your pick if the rookie can't play?</p></div>
+<div class="talk"><span class="speaker">Stephen A. Smith <small>(animated)</small></span><p>That is a different football team when Nasir Cruz is on the field! Fifty five receptions, seven hundred three yards, ten touchdowns! But listen to me carefully: practicing does not mean he's cleared. If the medical staff says he can't play, he doesn't play. And if he's OUT, I am leaning Indianapolis. If he's fully cleared and ready, I'm taking Baltimore.</p></div>
+<div class="talk"><span class="speaker">Dan Orlovsky <small>(disagreeing)</small></span><p>I'm taking the Ravens either way. They just won 35 to 7 without Nasir for almost the entire game. Caleb threw three touchdowns. Alec Pierce had over a hundred yards. It's a complete offense. Nasir makes the ceiling higher, but Baltimore is not helpless if he sits.</p></div>
+<div class="talk"><span class="speaker">Ryan Clark <small>(measured)</small></span><p>Seattle ain't Indianapolis. Jonathan Taylor is a problem, Brian Burns can change a passing down, and that Colts offense scores over 30 a game. Even if Nasir plays, we have no idea whether Baltimore would give him a normal workload. I'm taking Indianapolis in a close one.</p></div>
+<div class="talk"><span class="speaker">Marcus Spears <small>(confident)</small></span><p>Y'all forgot about Derrick Henry? Mark Andrews? That Baltimore line? I don't need a 300 yard game from Cruz to see how the Ravens can win. Give me Caleb protecting the ball, Henry working late, and that defense getting one big stop. I'm on Baltimore.</p></div>
+<div class="talk"><span class="speaker">Shae Cornette <small>(closing)</small></span><p>So the panel is split, and Nasir's final status could change the predictions. For now, the only confirmed story is that he practiced Wednesday and remains questionable.</p></div>
+<div aria-label="Analyst predicted scores" class="wk7-picks">
+<article><small>STEPHEN A. SMITH / CONDITIONAL</small><strong>BAL 31, IND 27</strong><p>If Cruz is cleared and fully available. If he sits: Indianapolis 27, Baltimore 24.</p></article>
+<article><small>DAN ORLOVSKY / RAVENS</small><strong>BAL 28, IND 24</strong><p>Picks Baltimore even without Nasir because Caleb has other productive weapons.</p></article>
+<article><small>RYAN CLARK / COLTS</small><strong>IND 27, BAL 23</strong><p>Taylor, the Indianapolis offensive line and Burns make this a tough matchup regardless of Cruz.</p></article>
+<article><small>MARCUS SPEARS / RAVENS</small><strong>BAL 27, IND 23</strong><p>Henry, Andrews and the defense carry enough weight whether or not Cruz is active.</p></article>
+<article><small>EDITORIAL CONSENSUS / NO OFFICIAL PICK</small><strong>TOO CLOSE</strong><p>No confirmed medical clearance, no fixed snap count and no actual betting market are represented here.</p></article>
+</div>
+</div>
+<p class="wk7-bottomnote">This is a fictional Thursday morning broadcast preview set inside the Madden Universe franchise. Matchup records, rosters, OVR ratings and the Wednesday Nasir practice update come from creator supplied screenshots and story details. No Week 7 results are depicted as played.</p>
+</div>
 </section>
-
 <section class="section"><div class="wrap"><div class="closing"><span class="eyebrow">COMING NEXT / WEEK 07</span><h3>THE BOARD IS SET.<br/>THE SCORES ARE NOT.</h3><p>Detroit visits Chicago. Cincinnati visits Pittsburgh. Baltimore travels to Indianapolis with Nasir Cruz still questionable. The matchups are set, the projections are in, and the Week 7 results have yet to be recorded.</p><a href="#week7">REVISIT THE WEEK 7 PREVIEW</a> <a href="../index.html">RETURN TO MADDEN UNIVERSE HOME</a></div></div></section>
 <footer class="footer"><div class="wrap"><span>MADDEN UNIVERSE / 2027 / WEEK 06 / FAN CREATED FICTIONAL FRANCHISE BROADCAST</span><span>Original simulation captures and images supplied by the franchise creator. This is a fictional recreation, not an actual ESPN production.</span><a href="#top">BACK TO TOP ↑</a></div></footer>
 <script>
