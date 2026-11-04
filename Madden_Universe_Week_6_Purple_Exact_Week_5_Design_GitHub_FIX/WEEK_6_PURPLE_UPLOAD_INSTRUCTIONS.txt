@@ -1,0 +1,32 @@
+MADDEN UNIVERSE 2027 | WEEK 6 PURPLE DESIGN CORRECTION
+
+This package contains TWO DIFFERENT index.html files and the Week 6 tunnel images.
+
+A. ROOT index.html
+   This is your main Madden Universe homepage, with a 06 WEEKLY EDITIONS count.
+   Upload to: github.com/MaddenUniverse/madden-universe/ (repository ROOT)
+
+B. Madden_Universe_2027_Week_6/index.html
+   This is the Week 6 page, styled EXACTLY like Week 5, with PURPLE accents.
+   Upload to: github.com/MaddenUniverse/madden-universe/tree/main/Madden_Universe_2027_Week_6
+   IMPORTANT: Replace the index.html INSIDE the Week 6 folder, not just the root homepage file.
+
+C. Madden_Universe_2027_Week_6/assets/
+   All three Week 6 arrival photos. Keep this folder in Week 6.
+
+FAST FIX FOR GOLD WEEK 6 PAGE:
+1. Extract the ZIP on your computer. Do not upload the ZIP file to GitHub.
+2. On GitHub open the Madden_Universe_2027_Week_6 folder.
+3. Choose Add file > Upload files.
+4. Upload the index.html from INSIDE the extracted Madden_Universe_2027_Week_6 folder.
+5. Commit changes. This replaces the old gold Week 6 HTML.
+6. Refresh your Week 6 browser tab with Ctrl+Shift+R after Pages deploys.
+
+OPTIONAL HOMEPAGE FIX:
+If the main homepage still says 05 WEEKLY EDITIONS, separately replace the repository ROOT index.html with the index.html at the ZIP's top level, and commit.
+
+DO NOT PUT THE WEEK 6 INDEX IN THE MAIN REPOSITORY ROOT.
+DO NOT PUT THE MAIN HOMEPAGE INDEX INSIDE THE WEEK 6 FOLDER.
+
+Expected final Week 6 address:
+https://maddenuniverse.github.io/madden-universe/Madden_Universe_2027_Week_6/
